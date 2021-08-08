@@ -1,14 +1,18 @@
-import React, { useState } from "react";
-import BurgerMenu from "../BurgerMenu";
+import React, { useRef, useState } from "react";
+import Burger from "../Burger";
 import Menu from "../Menu";
 import { Container } from "./Styles";
+import { useOnClickOutside } from "../../hooks/hooks";
 
 const Header = () => {
   const [open, toggleOpen] = useState(false);
+  const node = useRef();
+
+  useOnClickOutside(node, () => toggleOpen(false));
 
   return (
-    <Container>
-      <BurgerMenu open={open} setOpen={toggleOpen} />
+    <Container ref={node}>
+      <Burger open={open} setOpen={toggleOpen} />
       <Menu open={open} />
     </Container>
   );

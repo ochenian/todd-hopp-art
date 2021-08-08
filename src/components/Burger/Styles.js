@@ -46,7 +46,7 @@ export const BurgerInner = styled.span`
   }
 `;
 
-export const Burger = styled.button`
+export const BurgerContainer = styled.button`
   padding: 15px;
   display: inline-block;
   cursor: pointer;
