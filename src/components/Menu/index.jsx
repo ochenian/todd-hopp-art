@@ -8,6 +8,9 @@ const Menu = ({ open }) => {
 
   return (
     <StyledMenu open={open} aria-hidden={!isHidden}>
+      <Link to="/" tabIndex={tabIndex}>
+        Home
+      </Link>
       <Link to="/storyboards" tabIndex={tabIndex}>
         Storyboards
       </Link>
