@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { color } from "../../shared/utils/styles";
 
 export const BurgerBox = styled.span`
   width: 40px;
@@ -25,6 +26,12 @@ export const BurgerInner = styled.span`
     transition-timing-function: ease;
   }
 
+  &:hover,
+  &:hover::before,
+  &:hover::after {
+    background-color: ${color.pink};
+  }
+
   &::before,
   &::after {
     content: "";
@@ -47,7 +54,6 @@ export const BurgerInner = styled.span`
 `;
 
 export const BurgerContainer = styled.button`
-  padding: 15px;
   display: inline-block;
   cursor: pointer;
 
@@ -55,25 +61,17 @@ export const BurgerContainer = styled.button`
   transition-duration: 0.15s;
   transition-timing-function: linear;
 
-  // Normalize (<button>)
   font: inherit;
   color: inherit;
   text-transform: none;
   background-color: transparent;
   border: 0;
   margin: 0;
+  padding: 0;
   overflow: visible;
   z-index: 20;
 
-  &:hover {
-    filter: opacity(50%);
-  }
-
   &.is-active {
-    &:hover {
-      filter: opacity(50%);
-    }
-
     ${BurgerInner} {
       transform: translate3d(0, 10px, 0) rotate(135deg);
       transition-delay: 0.075s;
@@ -92,6 +90,13 @@ export const BurgerContainer = styled.button`
       &::before,
       &::after {
         background-color: #fff;
+        text-shadow: 0 0 4px ${color.black};
+      }
+
+      &:hover,
+      &:hover::before,
+      &:hover::after {
+        background-color: ${color.pink};
       }
     }
   }

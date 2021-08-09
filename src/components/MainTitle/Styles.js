@@ -51,6 +51,6 @@ export const StyledContactLink = styled(ContactLink)`
   margin: 12px 0 0 20%;
 
   &:hover path.text-color {
-    fill: ${color.lightBlue};
+    fill: ${color.pink};
   }
 `;

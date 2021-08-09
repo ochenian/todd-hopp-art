@@ -5,5 +5,5 @@ export const Container = styled.div`
   flex-direction: column;
 `;
 export const Main = styled.main`
-  margin: 3em 0;
+  margin: 2em;
 `;
