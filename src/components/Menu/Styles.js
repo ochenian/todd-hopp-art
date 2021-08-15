@@ -29,7 +29,7 @@ export const StyledMenu = styled.nav`
     color: ${color.white};
     text-decoration: none;
     transition: color 0.3s linear;
-    text-shadow: 0 0 4px ${color.black};
+    text-shadow: 0 0 2px ${color.black};
 
     @media (max-width: 576px) {
       font-size: 1.5rem;

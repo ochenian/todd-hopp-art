@@ -4,11 +4,11 @@ import TwitterIcon from "../../assets/svg/icon-twitter.svg";
 import InstagramIcon from "../../assets/svg/icon-instagram.svg";
 
 export const FooterContainer = styled.footer`
-  position: relative;
-  bottom: 20px;
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin-top: auto;
+  margin-bottom: 32px;
 }
 `;
 
