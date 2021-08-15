@@ -28,9 +28,14 @@ const Panel = ({ imageData, label, altText, gallery }) => {
             selectedItem={currentSlide}
             onChange={index => setCurrentSlide(index)}
             showArrows={false}
+            showThumbs={false}
           >
             {gallery.map(image => (
-              <GatsbyImage image={image} />
+              <GatsbyImage
+                key={image?.images.src}
+                image={image}
+                alt="Carousel image"
+              />
             ))}
           </Carousel>
         ) : (
@@ -41,11 +46,13 @@ const Panel = ({ imageData, label, altText, gallery }) => {
             src="../../images/arrow-back.png"
             onClick={() => setCurrentSlide(currentSlide - 1)}
             style={{ cursor: "pointer" }}
+            alt="Back arrow"
           />
           <StaticImage
             src="../../images/arrow-forward.png"
             onClick={() => setCurrentSlide(currentSlide + 1)}
             style={{ cursor: "pointer" }}
+            alt="Forward arrow"
           />
         </ArrowContainer>
       </Modal>
